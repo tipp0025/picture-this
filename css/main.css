@@ -1,0 +1,292 @@
+:root {
+  --primary-dark: #333;
+  --primary-light: #f4f4f4;
+  --accent-blue: #007bff;
+  --accent-red: #dc3545;
+}
+
+/* Resetting default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Body styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+/* Header styles */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1.2rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+/* Navigation styles */
+
+nav button {
+  background-color: #555;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+nav button.active {
+  background-color: #555;
+  color: #fff;
+}
+
+/* Main styles */
+main {
+  padding: 20px;
+}
+
+.container {
+  max-width: 80vw;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.searchForm p {
+  margin-bottom: 0.6rem;
+}
+
+.searchForm label {
+  font-weight: bold;
+}
+
+.searchForm input[type="text"] {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.searchForm button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.searchForm button:hover {
+  background-color: #0056b3;
+}
+
+#results {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btnBlue {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btnRed {
+  background-color: var(--accent-red);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Image Grid */
+
+.card {
+  background-color: var(--primary-light);
+  padding: 1rem;
+  border: 0.3rem solid var(--accent-blue);
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 12rem;
+  height: 12rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.resultsImg {
+  object-fit: cover;
+  border-radius: 5px;
+  justify-content: center;
+}
+
+/* Form Dialog */
+
+#searchSettingsDialog {
+  position: fixed;
+  top: 20%;
+  left: 30%;
+  background-color: var(--primary-light);
+}
+
+.settingsForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 2rem 1rem 2rem;
+}
+
+.form--container {
+  height: 16rem;
+  width: 20rem;
+}
+
+#closeSettings {
+  display: block;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input {
+  background-color: var(--primary-light);
+  border-radius: 0.2rem;
+}
+
+/* Result Image Dialog */
+
+#imgDialog {
+  position: fixed;
+  top: 20%;
+  left: 20%;
+  background-color: var(--primary-light);
+  border: solid 0.3rem var(--primary-dark);
+  border-radius: 0.5rem;
+}
+.dialogContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#dialogButtons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.5rem 0 0 0;
+}
+
+#saveText {
+  text-align: center;
+  padding-bottom: 0.25rem;
+  padding-top: 0.25rem;
+}
+
+/* Cached Images */
+#saved {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+#largeImg {
+  max-width: 40rem;
+  max-height: 40rem;
+}
+
+.cacheCard {
+  background-color: var(--primary-light);
+  padding: 1rem;
+  border: 0.3rem solid var(--accent-red);
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 12rem;
+  height: 12rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.savedImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Cached Images Dialog */
+
+#cacheDialog {
+  position: fixed;
+  top: 20%;
+  left: 20%;
+  background-color: var(--primary-light);
+  border: solid 0.3rem var(--primary-dark);
+  border-radius: 0.5rem;
+}
+
+#cacheDialogImg {
+  max-width: 40rem;
+  max-height: 40rem;
+  object-fit: contain;
+}
+
+#cacheDialogButtons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.5rem 0 0 0;
+}
+
+.dialogText {
+  text-align: center;
+  padding-bottom: 0.5rem;
+}
+
+/* Canvas Styles */
+
+canvas {
+  max-width: 40rem;
+  max-height: 40rem;
+  border: solid 0.5rem var(--primary-dark);
+  border-radius: 0.2rem;
+}
+
+#canvasContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3rem;
+}
+
+/* Hover effects */
+
+.card:hover {
+  transform: translateY(-0.25rem);
+}
+
+.cacheCard:hover {
+  transform: translateY(-0.25rem);
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>SPA Final Project</title>
+  </head>
+  <body>
+    <header>
+      <h1>Picture This</h1>
+      <nav>
+        <button class="active" id="btnSettings">Settings</button>
+        <button class="btnRed" id="btnSaved">Saved</button>
+        <button class="btnBlue" id="btnResults">Results</button>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <dialog id="searchSettingsDialog">
+          <div class="form--container">
+            <form class="settingsForm">
+              <label for="image_type">image_type: </label>
+              <small>"all", "photo", "illustration", "vector"</small>
+              <input
+                type="text"
+                placeholder="photo"
+                id="image_type"
+                name="image_type"
+              />
+              <label for="orientation">orientation: </label>
+              <small>"all", "horizontal", "vertical"</small>
+              <input
+                type="text"
+                placeholder="horizontal"
+                id="orientation"
+                name="orientation"
+              />
+              <label for="category">category: </label>
+              <small>eg. "people", "backgrounds", "nature"</small>
+              <input
+                type="text"
+                placeholder="people"
+                id="category"
+                name="category"
+              />
+              <label for="per_page">per_page: </label>
+              <small>number of results to display</small>
+              <input
+                type="number"
+                placeholder="30"
+                id="per_page"
+                name="per_page"
+              />
+            </form>
+          </div>
+          <button id="closeSettings" class="btnBlue">Accept</button>
+        </dialog>
+        <div class="searchForm">
+          <p>Run a search for images</p>
+          <form>
+            <p>
+              <label for="keyword">Key Term</label>
+              <input type="text" id="keyword" name="keyword" />
+            </p>
+            <p>
+              <button id="btnRunSearch">Run Search</button>
+            </p>
+          </form>
+        </div>
+        <div class="image-grid">
+          <div id="results"></div>
+          <div id="saved"></div>
+        </div>
+      </div>
+      <dialog id="imgDialog"></dialog>
+      <dialog id="cacheDialog"></dialog>
+      <div id="canvasContainer"></div>
+    </main>
+    <script src="./js/main.js" type="module"></script>
+  </body>
+</html>
